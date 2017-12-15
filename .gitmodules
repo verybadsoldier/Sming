@@ -92,3 +92,7 @@
 [submodule "Sming/third-party/libyuarel"]
 	path = Sming/third-party/libyuarel
 	url = https://github.com/jacketizer/libyuarel.git
+[submodule "Sming/Libraries/RGBWWLed"]
+	path = Sming/Libraries/RGBWWLed
+	url = https://github.com/verybadsoldier/RGBWWLed.git
+        ignore = dirty
