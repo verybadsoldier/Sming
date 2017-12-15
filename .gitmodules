@@ -89,3 +89,7 @@
 	path = Sming/Libraries/TM1637
 	url = https://github.com/avishorp/TM1637.git
 	ignore = dirty
+[submodule "Sming/Libraries/RGBWWLed"]
+	path = Sming/Libraries/RGBWWLed
+	url = https://github.com/verybadsoldier/RGBWWLed.git
+        ignore = dirty
