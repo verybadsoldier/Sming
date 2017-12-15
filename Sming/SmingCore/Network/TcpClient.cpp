@@ -83,6 +83,9 @@ bool TcpClient::send(const char* data, uint16_t len, bool forceCloseAfterSent /*
 		return false;
 	}
 
+	if(asyncTotalLen == asyncTotalSent)
+		pushAsyncPart();
+
 	debugf("Storing %d bytes in stream", len);
 
 	asyncTotalLen += len;
