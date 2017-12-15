@@ -65,3 +65,7 @@
 	path = tools/esptool2
 	url = https://github.com/raburton/esptool2.git
 	ignore = dirty
+
+[submodule "Sming/Libraries/RGBWWLed"]
+	path = Sming/Libraries/RGBWWLed
+	url = https://github.com/verybadsoldier/RGBWWLed.git
