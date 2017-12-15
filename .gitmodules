@@ -61,3 +61,6 @@
 	path = Sming/third-party/ESP8266_NONOS_SDK
 	url = https://github.com/espressif/ESP8266_NONOS_SDK.git
 	ignore = dirty
+[submodule "Sming/Libraries/RGBWWLed"]
+	path = Sming/Libraries/RGBWWLed
+	url = https://github.com/verybadsoldier/RGBWWLed.git
