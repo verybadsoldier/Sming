@@ -9,7 +9,7 @@
 #include "../Wiring/WiringFrameworkDependencies.h"
 
 #define RTC_MAGIC 0x55aaaa55
-#define RTC_DES_ADDR 64
+#define RTC_DES_ADDR 128
 #define NS_PER_SECOND 1000000000
 
 /** @brief  Structure to hold RTC data
