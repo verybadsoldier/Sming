@@ -249,7 +249,14 @@ bool MqttClient::publish(const String& topic, const String& content, uint8_t fla
 	COPY_STRING(message->publish.topic_name, topic);
 	COPY_STRING(message->publish.content, content);
 
-	return requestQueue.enqueue(message);
+	bool rc = requestQueue.enqueue(message);
+	// evil hack to make message get sent instantly
+	// until fixed: https://github.com/SmingHub/Sming/issues/547
+	if (rc) {
+		onReadyToSendData(TcpConnectionEvent::eTCE_Poll);
+		onReadyToSendData(TcpConnectionEvent::eTCE_Poll);
+	}
+	return rc;
 }
 
 bool MqttClient::publish(const String& topic, IDataSourceStream* stream, uint8_t flags)
@@ -275,7 +282,14 @@ bool MqttClient::publish(const String& topic, IDataSourceStream* stream, uint8_t
 	message->publish.content.length = MQTT_PUBLISH_STREAM;
 	message->publish.content.data = (uint8_t*)stream;
 
-	return requestQueue.enqueue(message);
+	bool rc = requestQueue.enqueue(message);
+	// evil hack to make message get sent instantly
+	// until fixed: https://github.com/SmingHub/Sming/issues/547
+	if (rc) {
+		onReadyToSendData(TcpConnectionEvent::eTCE_Poll);
+		onReadyToSendData(TcpConnectionEvent::eTCE_Poll);
+	}
+	return rc;
 }
 
 bool MqttClient::subscribe(const String& topic)
