@@ -1940,7 +1940,7 @@
  * TCP_DEBUG: Enable debugging for TCP.
  */
 #ifndef TCP_DEBUG
-#define TCP_DEBUG                       LWIP_DBG_OFF
+#define TCP_DEBUG                       LWIP_DBG_ON
 #endif
 
 /**
@@ -1954,7 +1954,7 @@
  * TCP_FR_DEBUG: Enable debugging in tcp_in.c for fast retransmit.
  */
 #ifndef TCP_FR_DEBUG
-#define TCP_FR_DEBUG                    LWIP_DBG_OFF
+#define TCP_FR_DEBUG                    LWIP_DBG_ON
 #endif
 
 /**
@@ -1962,7 +1962,7 @@
  * timeout.
  */
 #ifndef TCP_RTO_DEBUG
-#define TCP_RTO_DEBUG                   LWIP_DBG_OFF
+#define TCP_RTO_DEBUG                   LWIP_DBG_ON
 #endif
 
 /**

@@ -7,6 +7,7 @@
 #############################################################
 
 ## Defaults for Sming Core
+ENABLE_LWIPDEBUG=1
 
 ## ESP_HOME sets the path where ESP tools and SDK are located.
 ## Windows:
